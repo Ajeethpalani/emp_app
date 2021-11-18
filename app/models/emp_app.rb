@@ -1,0 +1,2 @@
+class EmpApp < ApplicationRecord
+end

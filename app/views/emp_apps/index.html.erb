@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Emp Apps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Designation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @emp_apps.each do |emp_app| %>
+      <tr>
+        <td><%= emp_app.name %></td>
+        <td><%= emp_app.age %></td>
+        <td><%= emp_app.gender %></td>
+        <td><%= emp_app.designation %></td>
+        <td><%= link_to 'Show', emp_app %></td>
+        <td><%= link_to 'Edit', edit_emp_app_path(emp_app) %></td>
+        <td><%= link_to 'Destroy', emp_app, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Emp App', new_emp_app_path %>
